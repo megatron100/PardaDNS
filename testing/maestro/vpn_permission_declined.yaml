@@ -1,0 +1,19 @@
+# Precondition: VPN disconnected and consent revoked:
+#   adb shell appops set com.panda.dns ACTIVATE_VPN ignore
+# Cancelling Android's VPN dialog shows our explanation (no re-ask loop); the next
+# connect tap shows it first, and "Try again" reaches the system dialog. Ends granted.
+appId: com.panda.dns
+name: Declined VPN permission explains and retries
+---
+- launchApp:
+    stopApp: false
+- tapOn: "Connect"
+- tapOn: "Cloudflare"
+- tapOn: "Cancel"
+- assertVisible: "VPN permission needed"
+- tapOn: "Not now"
+- assertVisible: "Not Protected"
+- tapOn: "Cloudflare"
+- assertVisible: "VPN permission needed"
+- tapOn: "Try again"
+- tapOn: "OK"

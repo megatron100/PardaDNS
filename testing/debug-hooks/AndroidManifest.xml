@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Debug-build-only manifest (merged via the "debug" source set in app/build.gradle.kts).
+  Exported so `adb shell am broadcast -n ...` can reach it; it never ships in release builds.
+-->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <application>
+        <receiver
+            android:name="com.example.pardadns.debughooks.DebugHooksReceiver"
+            android:exported="true" />
+    </application>
+</manifest>

@@ -1,0 +1,23 @@
+# Precondition: Pro revoked (hook PRO --ez on false).
+# A free user can open the Pro screens, sees the upsell, and is sent to the paywall.
+appId: com.panda.dns
+name: Free user is routed to the paywall
+---
+- launchApp:
+    stopApp: false          # keep the VPN service alive
+- tapOn: "Settings"
+- scrollUntilVisible:              # Settings may keep its scroll position from earlier
+    element: "Blocklists & Filters"
+    direction: UP
+- tapOn: "Blocklists & Filters"
+- assertVisible: "Unlock smart filtering"
+- tapOn: "Unlock smart filtering"
+- assertVisible: "Unlock Premium Features"
+- back
+- assertVisible: "Unlock smart filtering"   # paywall returns to the feature it came from
+- back
+- scrollUntilVisible:
+    element: "Schedule & Auto-connect"
+- tapOn: "Schedule & Auto-connect"
+- assertVisible: "Automate your protection"
+- back

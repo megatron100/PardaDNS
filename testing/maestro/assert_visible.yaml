@@ -1,0 +1,11 @@
+# Generic check: bring the app to the front and assert a text (regex) is on screen.
+#   maestro test -e TEXT="Off by Schedule" testing/maestro/assert_visible.yaml
+appId: com.panda.dns
+name: Assert text is visible
+---
+- launchApp:
+    stopApp: false
+- tapOn: "Connect"
+- extendedWaitUntil:
+    visible: ${TEXT}
+    timeout: 10000

@@ -1,0 +1,14 @@
+{
+  "parameters": {
+    "pro_enabled_for_all": {
+      "defaultValue": { "value": "false" },
+      "valueType": "BOOLEAN",
+      "description": "true = every Pro feature is free for everyone."
+    },
+    "pro_product_id": {
+      "defaultValue": { "value": "pro_lifetime" },
+      "valueType": "STRING",
+      "description": "Play Console product ID of the one-time (lifetime) Pro purchase."
+    }
+  }
+}

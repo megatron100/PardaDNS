@@ -1,0 +1,30 @@
+*.iml
+.gradle
+/local.properties
+.idea/
+.DS_Store
+/build
+/captures
+.externalNativeBuild
+.cxx
+.kotlin/
+local.properties
+
+# Secrets and signing material
+keystore.properties
+*.jks
+*.keystore
+app/google-services.json
+
+# Local tooling and logs
+.playwright-mcp/
+.vscode/
+.claude/
+.github/copilot-instructions.md
+*.log
+build_*.txt
+ui*.xml
+*.db
+
+# E2E test artifacts
+testing/out/

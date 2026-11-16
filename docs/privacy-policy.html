@@ -1,0 +1,212 @@
+<!--
+  Panda DNS Privacy Policy — paste this into Google Blogger's HTML editor.
+  Last updated: April 16, 2026
+-->
+
+<h1 style="text-align: center;">Privacy Policy for Panda DNS</h1>
+<p style="text-align: center;"><strong>Last Updated:</strong> April 16, 2026</p>
+
+<hr />
+
+<p>
+  Panda DNS ("we," "our," or "the App") is a free Android application that provides
+  system-wide DNS-based ad blocking via an on-device VPN tunnel. This Privacy Policy explains what
+  data we collect, how we use it, and how we protect your information. By using PardaDNS, you agree
+  to the practices described in this policy.
+</p>
+
+<h2>1. Information We Collect</h2>
+
+<h3>1.1 Information We Do <u>Not</u> Collect</h3>
+<ul>
+  <li><strong>No personal data:</strong> We do not collect your name, email address, phone number, or any other personally identifiable information (PII).</li>
+  <li><strong>No account or registration:</strong> PardaDNS does not require account creation or sign-in of any kind.</li>
+  <li><strong>No browsing history:</strong> We do not log, store, or transmit the websites you visit or DNS queries you make to any external server.</li>
+  <li><strong>No advertising data:</strong> We do not collect data for advertising purposes. There are no ads in the App.</li>
+  <li><strong>No data sharing with third parties:</strong> We do not sell, rent, trade, or otherwise share any user data with third parties for marketing or advertising purposes.</li>
+</ul>
+
+<h3>1.2 Information Collected by Firebase Services</h3>
+<p>Panda DNS uses the following Google Firebase services to improve app stability and user experience:</p>
+
+<h4>Firebase Analytics</h4>
+<p>We use Firebase Analytics to understand how users interact with the App in aggregate. This includes:</p>
+<ul>
+  <li>App opens and session duration</li>
+  <li>Screen views and navigation patterns</li>
+  <li>Device model, OS version, and country (no precise location)</li>
+  <li>App version and crash-free statistics</li>
+</ul>
+<p>This data is collected anonymously and cannot be used to identify individual users. We do not log any custom events related to your DNS queries, browsing activity, or blocked domains.</p>
+<p><strong>Note:</strong> Firebase Analytics is used only during the beta development phase to help us improve the App. Once the App exits beta, Firebase Analytics will be removed entirely. Only Firebase Crashlytics will remain to ensure app stability.</p>
+
+<h4>Firebase Crashlytics</h4>
+<p>We use Firebase Crashlytics to receive crash reports when the App encounters an error. This helps us fix bugs and improve stability. Crash reports include:</p>
+<ul>
+  <li>Stack traces and error messages</li>
+  <li>Device model, OS version, and app version</li>
+  <li>State of the App at the time of the crash</li>
+</ul>
+<p>Crash reports do not contain your DNS queries, browsing history, or any personally identifiable information.</p>
+
+<h4>Firebase Remote Config</h4>
+<p>We use Firebase Remote Config to deliver feature flags and configuration updates without requiring an app update. This service only downloads configuration data to your device — it does not upload any user data.</p>
+
+<p>For more information about how Google handles Firebase data, please review the <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase Privacy Policy</a>.</p>
+
+<h3>1.3 Information Stored Locally on Your Device</h3>
+<p>Panda DNS stores the following data <strong>entirely on your device</strong> for the purpose of displaying in-app statistics. This data never leaves your device:</p>
+<ul>
+  <li><strong>DNS query statistics:</strong> Aggregate counts of total DNS queries processed and blocked queries, grouped by hour (rolling 72 hours) and by day (rolling 30 days).</li>
+  <li><strong>Per-domain statistics:</strong> Aggregate query and blocked counts for individual domains (e.g., "ads.example.com — 42 queries, 42 blocked").</li>
+  <li><strong>Per-app statistics:</strong> Aggregate query and blocked counts attributed to installed apps on your device.</li>
+  <li><strong>Custom DNS providers:</strong> If you add a custom DNS provider, the server name, IP addresses, and DNS-over-HTTPS (DoH) URL you enter are stored in the App's local preferences.</li>
+  <li><strong>App filter preferences:</strong> The list of apps you choose to exclude from the VPN tunnel is stored locally.</li>
+  <li><strong>Theme and UI preferences:</strong> Your chosen theme mode (System, Light, or Dark) is stored locally.</li>
+</ul>
+
+<p>All locally stored data can be cleared at any time by clearing the App's data or uninstalling it.</p>
+
+<h2>2. How the VPN Permission Works</h2>
+
+<p>
+  Panda DNS uses Android's <code>VpnService</code> API to create a local, on-device VPN tunnel.
+  <strong>This is not a traditional VPN</strong> — it does not route your internet traffic through a
+  remote server. Instead:
+</p>
+<ul>
+  <li>A local tunnel is created on your device to intercept DNS requests only.</li>
+  <li>DNS queries are forwarded to the DNS provider you select (e.g., AdGuard DNS, Cloudflare DNS, NextDNS, Google DNS, or a custom provider).</li>
+  <li>Ad-serving and tracking domains are blocked based on the DNS provider's filtering capabilities.</li>
+  <li>All other internet traffic (web browsing, streaming, downloads, etc.) passes through your normal network connection unaffected.</li>
+</ul>
+
+<p>
+  Android requires explicit user permission before establishing a VPN connection. You will see a
+  system dialog asking you to approve the VPN the first time you connect.
+</p>
+
+<h2>3. Third-Party DNS Providers</h2>
+
+<p>
+  When you select a DNS provider in Panda DNS, your DNS queries are forwarded to that provider's
+  servers. The built-in options include:
+</p>
+<ul>
+  <li>AdGuard DNS</li>
+  <li>Cloudflare DNS (1.1.1.1)</li>
+  <li>Google Public DNS</li>
+  <li>NextDNS</li>
+</ul>
+
+<p>
+  Each DNS provider has its own privacy policy governing how they handle DNS queries. We encourage
+  you to review the privacy policy of the DNS provider you choose:
+</p>
+<ul>
+  <li><strong>AdGuard DNS:</strong> <a href="https://adguard-dns.io/en/privacy.html" target="_blank" rel="noopener">https://adguard-dns.io/en/privacy.html</a></li>
+  <li><strong>Cloudflare:</strong> <a href="https://developers.cloudflare.com/1.1.1.1/privacy/public-dns-resolver/" target="_blank" rel="noopener">https://developers.cloudflare.com/1.1.1.1/privacy/public-dns-resolver/</a></li>
+  <li><strong>Google Public DNS:</strong> <a href="https://developers.google.com/speed/public-dns/privacy" target="_blank" rel="noopener">https://developers.google.com/speed/public-dns/privacy</a></li>
+  <li><strong>NextDNS:</strong> <a href="https://nextdns.io/privacy" target="_blank" rel="noopener">https://nextdns.io/privacy</a></li>
+</ul>
+
+<p>
+  If you add a custom DNS provider, your DNS queries will be sent to the server you specify.
+  Panda DNS has no control over how third-party DNS providers process your queries.
+</p>
+
+<h2>4. Permissions We Request</h2>
+
+<p>Panda DNS requests the following Android permissions, all of which are necessary for core functionality:</p>
+
+<table border="1" cellpadding="8" cellspacing="0" style="border-collapse: collapse; width: 100%;">
+  <thead>
+    <tr style="background-color: #f0f0f0;">
+      <th>Permission</th>
+      <th>Purpose</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>INTERNET</strong></td>
+      <td>Required to forward DNS queries to upstream DNS providers via DNS-over-HTTPS (DoH) or UDP.</td>
+    </tr>
+    <tr>
+      <td><strong>VPN Service (BIND_VPN_SERVICE)</strong></td>
+      <td>Required to create the local VPN tunnel that intercepts DNS traffic on your device.</td>
+    </tr>
+    <tr>
+      <td><strong>Foreground Service</strong></td>
+      <td>Required to keep the VPN tunnel active while you use your device, displayed as a persistent notification.</td>
+    </tr>
+    <tr>
+      <td><strong>Wake Lock</strong></td>
+      <td>Keeps the CPU active so the DNS forwarding loop can process queries reliably in the background.</td>
+    </tr>
+    <tr>
+      <td><strong>Access Network State</strong></td>
+      <td>Detects network changes (Wi-Fi ↔ cellular) so the VPN can adapt seamlessly.</td>
+    </tr>
+    <tr>
+      <td><strong>Query All Packages</strong></td>
+      <td>Enumerates installed apps so you can choose which apps to exclude from the VPN tunnel in the App Filter screen.</td>
+    </tr>
+    <tr>
+      <td><strong>Request Ignore Battery Optimizations</strong></td>
+      <td>Optionally prompts you to exempt Panda DNS from Android's Doze mode so the VPN stays active during standby.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>5. Data Security</h2>
+
+<ul>
+  <li>Your DNS queries and browsing history are processed locally on your device and are never transmitted to our servers or any third party.</li>
+  <li>Anonymous usage analytics and crash reports are transmitted securely to Google Firebase using encrypted connections (HTTPS/TLS).</li>
+  <li>When DNS-over-HTTPS (DoH) is used, your DNS queries are encrypted in transit between your device and the DNS provider.</li>
+  <li>The local VPN tunnel operates entirely within your device's network stack — your internet traffic is not routed through any external proxy or server.</li>
+  <li>Statistics stored in the local database are accessible only to the Panda DNS app and are protected by Android's application sandbox.</li>
+</ul>
+
+<h2>6. Children's Privacy</h2>
+
+<p>
+  Panda DNS does not knowingly collect any personal information from anyone, including children under
+  the age of 13. The App does not require registration or personal data input. Since we do not
+  collect any personal information, the Children's Online Privacy Protection Act (COPPA) and similar
+  regulations are inherently satisfied.
+</p>
+
+<h2>7. Data Retention and Deletion</h2>
+
+<ul>
+  <li><strong>Hourly statistics</strong> are automatically purged after 72 hours.</li>
+  <li><strong>Daily statistics</strong> are automatically purged after 30 days.</li>
+  <li><strong>All local data</strong> (statistics, preferences, custom DNS providers) can be permanently deleted at any time by clearing the App's storage in Android Settings or by uninstalling the App.</li>
+  <li><strong>Firebase data:</strong> Anonymous analytics and crash data collected by Firebase are retained according to <a href="https://firebase.google.com/support/privacy#data_retention" target="_blank" rel="noopener">Google's data retention policies</a>. You can opt out of Firebase Analytics by disabling "Usage &amp; diagnostics" in your device's Google settings.</li>
+</ul>
+
+<h2>8. Changes to This Privacy Policy</h2>
+
+<p>
+  We may update this Privacy Policy from time to time. Any changes will be posted on this page with
+  an updated "Last Updated" date. We encourage you to review this Privacy Policy periodically.
+  Continued use of the App after changes are posted constitutes acceptance of the revised policy.
+</p>
+
+<h2>9. Contact Us</h2>
+
+<p>
+  If you have any questions, concerns, or suggestions regarding this Privacy Policy or the App,
+  please contact us at:
+</p>
+
+<p style="padding-left: 30px;">
+  <strong>Email:</strong> [your-email@example.com]
+</p>
+
+<hr />
+
+<p style="text-align: center; color: #888; font-size: 0.9em;">
+  &copy; 2026 Panda DNS. All rights reserved.
+</p>

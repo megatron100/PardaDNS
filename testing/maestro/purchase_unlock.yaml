@@ -1,0 +1,22 @@
+# Precondition: free user with the fake Play installed and set to succeed
+#   (hook PRO --ez clear true; hook BILLING --es result reset; hook BILLING --es result success).
+# Buying Pro on the paywall unlocks the feature the user came from.
+appId: com.panda.dns
+name: Free user buys Pro and the feature unlocks
+---
+- launchApp:
+    stopApp: false          # keep the VPN service alive
+- tapOn: "Settings"
+- scrollUntilVisible:              # Settings may keep its scroll position from earlier
+    element: "Blocklists & Filters"
+    direction: UP
+- tapOn: "Blocklists & Filters"
+- tapOn: "Unlock smart filtering"
+- assertVisible: "Upgrade to Pro · .*\\(test\\)"   # Play's (fake) localized price
+- tapOn: "Upgrade to Pro.*"
+- extendedWaitUntil:
+    notVisible: "Unlock Premium Features"          # paywall closes once Pro is active
+    timeout: 10000
+- assertVisible: "Blocklists & Filters"            # back on the feature it came from…
+- assertNotVisible: "Unlock smart filtering"       # …now unlocked
+- back

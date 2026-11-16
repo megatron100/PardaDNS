@@ -1,0 +1,15 @@
+# Precondition: Pro on, VPN connected.
+# Pause from the home header, check the paused UI, resume.
+appId: com.panda.dns
+name: Pause and resume from the home screen
+---
+- launchApp:
+    stopApp: false
+- tapOn: "Connect"
+- assertVisible: "Protected by .*"
+- tapOn: "Pause"
+- tapOn: "5 min"
+- assertVisible: "Protection Paused"
+- assertVisible: "Resumes at .*"
+- tapOn: "Resume now"
+- assertNotVisible: "Protection Paused"

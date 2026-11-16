@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- Left ear -->
+    <path
+        android:fillColor="#000000"
+        android:pathData="M37,38 m-10,0 a10,10 0 1,1 20,0 a10,10 0 1,1 -20,0" />
+
+    <!-- Right ear -->
+    <path
+        android:fillColor="#000000"
+        android:pathData="M71,38 m-10,0 a10,10 0 1,1 20,0 a10,10 0 1,1 -20,0" />
+
+    <!-- Face -->
+    <path
+        android:fillColor="#000000"
+        android:pathData="M54,57 m-23,0 a23,23 0 1,1 46,0 a23,23 0 1,1 -46,0" />
+</vector>

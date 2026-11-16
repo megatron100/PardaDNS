@@ -1,0 +1,39 @@
+<resources>
+    <string name="app_name">Panda DNS</string>
+    <string name="status_disconnected">Not Protected</string>
+    <string name="status_connecting">Connecting…</string>
+    <string name="status_connected">Protected by %1$s</string>
+    <string name="status_error">Unable to connect</string>
+    <string name="sub_disconnected">Tap to protect your traffic</string>
+    <string name="sub_connecting">Establishing secure tunnel…</string>
+    <string name="sub_connected">Your traffic is secure</string>
+    <string name="btn_connect">Connect</string>
+    <string name="btn_disconnect">Disconnect</string>
+    <string name="btn_toggle_vpn">Toggle VPN</string>
+    <string name="label_select_provider">Select DNS Provider</string>
+    <string name="error_vpn_permission_denied">Unable to connect.</string>
+    <string name="notif_channel_name">VPN Active</string>
+    <string name="notif_channel_desc">Shown while Panda DNS is protecting your DNS</string>
+    <string name="notif_title">Panda DNS Active</string>
+    <string name="notif_text">DNS protected via %1$s</string>
+    <string name="notif_action_pause">Pause 15 min</string>
+    <string name="notif_action_resume">Resume now</string>
+    <string name="notif_paused_title">Protection paused</string>
+    <string name="notif_paused_schedule_title">Off by schedule</string>
+    <string name="notif_paused_text">Resumes at %1$s</string>
+    <string name="status_paused">Protection Paused</string>
+    <string name="status_paused_schedule">Off by Schedule</string>
+    <string name="sub_paused">Resumes at %1$s</string>
+
+    <!-- Quick Settings tile -->
+    <string name="tile_label">Panda DNS</string>
+    <string name="tile_subtitle_active">Via %1$s</string>
+    <string name="tile_subtitle_inactive">Tap to protect</string>
+
+    <!-- Battery optimization dialog -->
+    <string name="battery_dialog_title">Block Trackers All the Time</string>
+    <string name="battery_dialog_message">Allow Panda DNS to keep blocking ads and trackers even when your screen is off. This requires a small battery exception so your protection never pauses.</string>
+    <string name="battery_dialog_confirm">Allow</string>
+    <string name="battery_dialog_dismiss">Not Now</string>
+    <string name="battery_dialog_dont_ask">Don\'t ask me again</string>
+</resources>
